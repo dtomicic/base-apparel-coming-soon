@@ -1,0 +1,102 @@
+body {
+  background: $firstgradient;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    padding: toRem(32);
+
+    &-svg {
+      display: flex;
+      width: toRem(100);
+      align-items: center;
+    }
+  }
+
+  &__picture-mobile {
+    display: flex;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: toRem(70);
+
+    &-heading {
+      text-align: center;
+      font-family: $josefin;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: toRem(12);
+      line-height: toRem(42);
+      color: $g-red;
+      margin-bottom: toRem(16);
+      font-size: toRem(40);
+    }
+
+    &-text {
+      text-align: center;
+      font-family: $josefin;
+      font-weight: 400;
+      max-width: toRem(350);
+      color: $d-red;
+      margin-bottom: toRem(32);
+      line-height: toRem(25);
+      opacity: 0.6;
+    }
+
+    &-email {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: toRem(60);
+    }
+
+    &-input {
+      padding: toRem(15);
+      border: toRem(1) solid $d-red;
+      border-radius: toRem(100);
+      border-right: 0px;
+      width: 70%;
+      margin-left: toRem(45);
+      opacity: 0.3;
+      font-family: $josefin;
+      font-weight: 400;
+      font-size: toRem(16);
+      color: $d-red;
+    }
+
+    &-input:focus {
+      outline: none;
+    }
+
+    &-button {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      right: toRem(43); 
+      border-radius: toRem(100);
+      border: toRem(1);
+      background: $secondgradient;
+      width: 17%;
+    }
+
+    &-arrow {
+      padding: toRem(15);
+    }
+  }
+}
+
+.accent {
+  color: $d-red;
+  font-weight: 300;
+}
