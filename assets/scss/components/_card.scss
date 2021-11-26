@@ -15,7 +15,7 @@
   &__picture-mobile {
     display: flex;
     height: auto;
-    max-width: 100%;
+    max-width: toRem(950);
     width: 100%;
   }
 
@@ -73,21 +73,48 @@
 
     &-input:focus {
       outline: none;
+      opacity: 1;
+      color: black;
     }
 
     &-button {
       display: flex;
       justify-content: center;
       position: relative;
-      right: toRem(43); 
+      right: toRem(70); 
       border-radius: toRem(100);
       border: toRem(1);
       background: $secondgradient;
       width: 17%;
+      transition: all 1s ease;
+    }
+
+    &-button:hover {
+      transform: scale(1.1) perspective(toRem(1));
+      filter: drop-shadow(0 toRem(10) toRem(8) $d-red);
+    }
+
+    &-error {
+      display: none;
+      position: relative;
+      right: toRem(80);
+      top: toRem(15);
+      height: toRem(23);
     }
 
     &-arrow {
       padding: toRem(15);
+    }
+
+    &-errormsg {
+      display: none;
+      font-family: $josefin;
+      font-weight: 300;
+      color: $s-red;
+      opacity: 0.6;
+      margin-left: toRem(-180);
+      margin-top: toRem(-50);
+      font-size: toRem(14);
     }
   }
 }

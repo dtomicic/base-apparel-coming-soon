@@ -38,7 +38,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: auto;
-  max-width: 100%;
+  max-width: 59.375rem;
   width: 100%;
 }
 
@@ -110,6 +110,8 @@ body {
 
 .card__main-input:focus {
   outline: none;
+  opacity: 1;
+  color: black;
 }
 
 .card__main-button {
@@ -120,15 +122,43 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  right: 2.6875rem;
+  right: 4.375rem;
   border-radius: 6.25rem;
   border: 0.0625rem;
   background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%);
   width: 17%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.card__main-button:hover {
+  -webkit-transform: scale(1.1) perspective(0.0625rem);
+          transform: scale(1.1) perspective(0.0625rem);
+  -webkit-filter: drop-shadow(0 0.625rem 0.5rem #ce9797);
+          filter: drop-shadow(0 0.625rem 0.5rem #ce9797);
+}
+
+.card__main-error {
+  display: none;
+  position: relative;
+  right: 5rem;
+  top: 0.9375rem;
+  height: 1.4375rem;
 }
 
 .card__main-arrow {
   padding: 0.9375rem;
+}
+
+.card__main-errormsg {
+  display: none;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  color: #f96262;
+  opacity: 0.6;
+  margin-left: -11.25rem;
+  margin-top: -3.125rem;
+  font-size: 0.875rem;
 }
 
 .accent {
