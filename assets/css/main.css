@@ -91,6 +91,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 3.75rem;
+  max-width: 30.625rem;
 }
 
 .card__main-input {
