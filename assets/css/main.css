@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, white 0%, #fff5f5 100%);
+  min-height: 100vh;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__logo {
+  padding: 2rem;
+}
+
+.card__logo-svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 6.25rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__picture-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.card__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4.375rem;
+}
+
+.card__main-heading {
+  text-align: center;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.75rem;
+  line-height: 2.625rem;
+  color: #413a3a;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.card__main-text {
+  text-align: center;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  max-width: 21.875rem;
+  color: #ce9797;
+  margin-bottom: 2rem;
+  line-height: 1.5625rem;
+  opacity: 0.6;
+}
+
+.card__main-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 3.75rem;
+  max-width: 30.625rem;
+}
+
+.card__main-input {
+  padding: 0.9375rem;
+  border: 0.0625rem solid #ce9797;
+  border-radius: 6.25rem;
+  border-right: 0px;
+  width: 70%;
+  margin-left: 2.8125rem;
+  opacity: 0.3;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ce9797;
+}
+
+.card__main-input:focus {
+  outline: none;
+}
+
+.card__main-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  right: 2.6875rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%);
+  width: 17%;
+}
+
+.card__main-arrow {
+  padding: 0.9375rem;
+}
+
+.accent {
+  color: #ce9797;
+  font-weight: 300;
+}
+/*# sourceMappingURL=main.css.map */
