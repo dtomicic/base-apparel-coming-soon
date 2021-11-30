@@ -1,6 +1,8 @@
 .card {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 
   &__logo {
     padding: toRem(32);
@@ -9,7 +11,13 @@
       display: flex;
       width: toRem(100);
       align-items: center;
+      order: 1;
     }
+  }
+
+  &__picture {
+    display: flex;
+    order: 2;
   }
 
   &__picture-mobile {
@@ -29,6 +37,7 @@
     justify-content: center;
     align-items: center;
     margin-top: toRem(70);
+    order: 3;
 
     &-heading {
       text-align: center;
@@ -57,7 +66,7 @@
       display: flex;
       width: 100%;
       justify-content: center;
-      margin-bottom: toRem(60);
+      margin-bottom: toRem(15);
       max-width: toRem(490);
     }
 
@@ -85,7 +94,7 @@
       display: flex;
       justify-content: center;
       position: relative;
-      right: toRem(70); 
+      right: toRem(60); 
       border-radius: toRem(100);
       border: toRem(1);
       background: $secondgradient;
@@ -116,11 +125,20 @@
       font-weight: 300;
       color: $s-red;
       opacity: 0.6;
-      margin-left: toRem(-180);
-      margin-top: toRem(-50);
+      max-width: 40%;
+      margin-right: toRem(200);
+      margin-bottom: toRem(20);
       font-size: toRem(14);
     }
   }
+}
+
+.showblock {
+  display: block;
+}
+
+.showborder {
+  border: 1px solid red;
 }
 
 .accent {
@@ -134,46 +152,60 @@
     justify-content: center;
     background: url(../img/bg-pattern-desktop.svg);
 
-    &__picture-desktop {
-      display: flex;
-      order: -3;
-    }
+    &__picture {
+      order: 2;
+      min-width: 100;
 
-    &__picture-mobile {
-      display: none;
+      &-desktop {
+        display: block;
+        margin-left: toRem(290);
+        height: 100vh;
+        box-sizing: border-box;
+        min-width: 50%;
+        margin-left: toRem(200);
+      }
+
+      &-mobile {
+        display: none;
+      }
     }
 
     &__logo {
-      order: -2;
+      width: 10%;
 
       &-svg {
         width: toRem(170);
+        margin-bottom: toRem(120);
+        margin-left: toRem(185);
+        display: block;
       }
     }
 
     &__main {
-      order: -1;
-      margin-right: toRem(200);
-      margin-left: toRem(-260);
+      order: 1;
 
       &-heading {
         text-align: left;
-        margin-right: toRem(110);
         font-size: toRem(60);
         line-height: toRem(68);
+        margin-right: toRem(100);
       }
 
       &-text {
         text-align: left;
-        width: toRem(430);
         max-width: toRem(480);
         line-height: toRem(30);
         font-weight: 300;
-        margin-right: toRem(50);
       }
 
       &-email {
-        min-width: toRem(600);
+        min-width: toRem(400);
+        margin-bottom: toRem(15);
+        margin-right: toRem(90);
+      }
+
+      &-errormsg {
+        margin-right: toRem(300);
       }
     }
   }

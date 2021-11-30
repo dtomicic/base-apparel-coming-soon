@@ -17,6 +17,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .card__logo {
@@ -31,6 +33,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.card__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .card__picture-mobile {
@@ -61,6 +75,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 4.375rem;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 .card__main-heading {
@@ -94,7 +111,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 3.75rem;
+  margin-bottom: 0.9375rem;
   max-width: 30.625rem;
 }
 
@@ -126,7 +143,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  right: 4.375rem;
+  right: 3.75rem;
   border-radius: 6.25rem;
   border: 0.0625rem;
   background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%);
@@ -160,9 +177,18 @@ body {
   font-weight: 300;
   color: #f96262;
   opacity: 0.6;
-  margin-left: -11.25rem;
-  margin-top: -3.125rem;
+  max-width: 40%;
+  margin-right: 12.5rem;
+  margin-bottom: 1.25rem;
   font-size: 0.875rem;
+}
+
+.showblock {
+  display: block;
+}
+
+.showborder {
+  border: 1px solid red;
 }
 
 .accent {
@@ -170,7 +196,7 @@ body {
   font-weight: 300;
 }
 
-@media (min-width: 87.5rem) {
+@media (min-width: 62rem) {
   .card {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -179,50 +205,59 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: url(/assets/img/bg-pattern-desktop.svg);
+    background: url(../img/bg-pattern-desktop.svg);
+  }
+  .card__picture {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    min-width: 100;
   }
   .card__picture-desktop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-ordinal-group: -2;
-        -ms-flex-order: -3;
-            order: -3;
+    display: block;
+    margin-left: 18.125rem;
+    height: 100vh;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-width: 50%;
+    margin-left: 12.5rem;
   }
   .card__picture-mobile {
     display: none;
   }
   .card__logo {
-    -webkit-box-ordinal-group: -1;
-        -ms-flex-order: -2;
-            order: -2;
+    width: 10%;
   }
   .card__logo-svg {
     width: 10.625rem;
+    margin-bottom: 7.5rem;
+    margin-left: 11.5625rem;
+    display: block;
   }
   .card__main {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    margin-right: 12.5rem;
-    margin-left: -16.25rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .card__main-heading {
     text-align: left;
-    margin-right: 6.875rem;
     font-size: 3.75rem;
     line-height: 4.25rem;
+    margin-right: 6.25rem;
   }
   .card__main-text {
     text-align: left;
-    width: 26.875rem;
     max-width: 30rem;
     line-height: 1.875rem;
     font-weight: 300;
-    margin-right: 3.125rem;
   }
   .card__main-email {
-    min-width: 37.5rem;
+    min-width: 25rem;
+    margin-bottom: 0.9375rem;
+    margin-right: 5.625rem;
+  }
+  .card__main-errormsg {
+    margin-right: 18.75rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
