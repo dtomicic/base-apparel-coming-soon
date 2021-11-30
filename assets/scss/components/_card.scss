@@ -15,8 +15,12 @@
   &__picture-mobile {
     display: flex;
     height: auto;
-    max-width: toRem(950);
+    max-width: toRem(1400);
     width: 100%;
+  }
+
+  &__picture-desktop {
+    display: none;
   }
 
   &__main {
@@ -31,7 +35,7 @@
       font-family: $josefin;
       text-transform: uppercase;
       font-weight: 600;
-      letter-spacing: toRem(12);
+      letter-spacing: toRem(19);
       line-height: toRem(42);
       color: $g-red;
       margin-bottom: toRem(16);
@@ -122,4 +126,55 @@
 .accent {
   color: $d-red;
   font-weight: 300;
+}
+
+@media (min-width: $break-desktop) {
+  .card {
+    flex-direction: row;
+    justify-content: center;
+    background: url(/assets/img/bg-pattern-desktop.svg);
+
+    &__picture-desktop {
+      display: flex;
+      order: -3;
+    }
+
+    &__picture-mobile {
+      display: none;
+    }
+
+    &__logo {
+      order: -2;
+
+      &-svg {
+        width: toRem(170);
+      }
+    }
+
+    &__main {
+      order: -1;
+      margin-right: toRem(200);
+      margin-left: toRem(-260);
+
+      &-heading {
+        text-align: left;
+        margin-right: toRem(110);
+        font-size: toRem(60);
+        line-height: toRem(68);
+      }
+
+      &-text {
+        text-align: left;
+        width: toRem(430);
+        max-width: toRem(480);
+        line-height: toRem(30);
+        font-weight: 300;
+        margin-right: toRem(50);
+      }
+
+      &-email {
+        min-width: toRem(600);
+      }
+    }
+  }
 }
