@@ -22,6 +22,7 @@ This project is part of Frontend Mentors course. It's a simple card page for an 
 - JavaScript
 
 ## Live preview
+[Click for live preview](https://base-apparel-coming-soon-git-main-dtomicic.vercel.app/)
 
 ## Screenshots
 <p align="center">
