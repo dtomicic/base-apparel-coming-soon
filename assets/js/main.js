@@ -6,11 +6,17 @@ document.addEventListener('invalid', (function(){
   };
 })(), true);
 
+var errorimg = document.getElementById('errorimg');
+var errormsg = document.getElementById('errormsg');
+var input = document.getElementById('input');
+
+
+
 function validate(enteredEmail){
 
   var mail_format = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
 
-  if(enteredEmail.value.match(enteredEmail)){
+  if(enteredEmail.value.match(mail_format)){
 
     document.form1.text1.focus();
 
@@ -18,13 +24,12 @@ function validate(enteredEmail){
   }
 
   else{
-    document.getElementById('errorimg').style.display = 'block';
-    document.getElementById('errormsg').style.display = 'block';
-    document.getElementById('input').style.border = '1px solid red';
+    errorimg.classList.toggle('showblock');
+    errormsg.classList.toggle('showblock');
+    input.classList.toggle('showborder');
 
     document.form1.text1.focus();
 
-    return false;
+   return false;
   }
-
 }
